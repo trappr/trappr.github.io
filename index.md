@@ -4,7 +4,7 @@ by Ryan Trapp
 
 You can use the [editor on GitHub](https://github.com/trappr/trappr.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
-Click on the [Index](https://github.com/trappr/trappr.github.io/index.html) for page two.
+Click on the [Index](index.html) for page two.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
