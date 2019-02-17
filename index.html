@@ -45,7 +45,7 @@
 		document.getElementById('weatherSubmit').addEventListener('click', function(event){
 			var req = new XMLHttpRequest();
 			var zip = document.getElementById('zipCode').value;
-			req.open("GET", "http://api.openweathermap.org/data/2.5/weather?zip=" + zip + ",us&units=imperial&appid=" + apiKey, true);
+			req.open("GET", "https://api.openweathermap.org/data/2.5/weather?zip=" + zip + ",us&units=imperial&appid=" + apiKey, true);
 			req.addEventListener('load',function(){
 		  if(req.status >= 200 && req.status < 400){
 			var weather = (JSON.parse(req.responseText));
