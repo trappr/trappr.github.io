@@ -16,6 +16,7 @@
     <div>
       <h2>Result</h2>
       <ul>
+		<li><span><b>City: </b></span><span id="city"></span></li>
         <li><span><b>Weather: </b></span><span id="mainWeather"></span></li>
 		<li><span><b>Temp: </b></span><span id="mainTemp"></span></li>
 		<li><span><b>Wind Speed: </b></span><span id="wind"></span></li>
@@ -50,6 +51,7 @@
 		  if(req.status >= 200 && req.status < 400){
 			var weather = (JSON.parse(req.responseText));
 			console.log(JSON.parse(req.responseText));
+			document.getElementById("city").innerHTML = weather.name;
 			document.getElementById("mainTemp").innerHTML = weather.main.temp + " degrees F";
 			document.getElementById("mainWeather").innerHTML = weather.weather[0].main;
 			document.getElementById("wind").innerHTML = weather.wind.speed + " miles/hour";
