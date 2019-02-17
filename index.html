@@ -2,39 +2,6 @@
 <html>
   <head>
     <b>Weather Info</b>
-	
-  </head>
-  <body>
-    <form>
-      <fieldset>
-        <legend>Enter Zip Code</legend>
-        <label for="zipCode"></label>
-        <input type="text" name="zipCode" id="zipCode">
-        <input type="submit" id="weatherSubmit">
-      </fieldset>
-    </form>
-    <div>
-      <h2>Result</h2>
-      <ul>
-        <li><span><b>Weather: </b></span><span id="mainWeather"></span></li>
-		<li><span><b>Temp: </b></span><span id="mainTemp"></span></li>
-		<li><span><b>Wind Speed: </b></span><span id="wind"></span></li>
-      </ul>
-    </div>
-	<form>
-      <fieldset>
-        <legend>Enter Some Text and Click Submit</legend>
-        <label for="someText"></label>
-        <input type="text" name="someText" id="someText">
-        <input type="submit" id="postSubmit">
-      </fieldset>
-    </form>
-    <div>
-      <h2>The return is:</h2>
-      <ul>
-        <li><span><b>Response: </b></span><span id="textResponse"></span></li>
-      </ul>
-    </div>
 	<script language = "JavaScript">
       var apiKey = "4a348f6fbab35c14417e4609c071970f";
 	  
@@ -84,5 +51,38 @@
 	  
 	  
     </script>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Enter Zip Code</legend>
+        <label for="zipCode"></label>
+        <input type="text" name="zipCode" id="zipCode">
+        <input type="submit" id="weatherSubmit">
+      </fieldset>
+    </form>
+    <div>
+      <h2>Result</h2>
+      <ul>
+        <li><span><b>Weather: </b></span><span id="mainWeather"></span></li>
+		<li><span><b>Temp: </b></span><span id="mainTemp"></span></li>
+		<li><span><b>Wind Speed: </b></span><span id="wind"></span></li>
+      </ul>
+    </div>
+	<form>
+      <fieldset>
+        <legend>Enter Some Text and Click Submit</legend>
+        <label for="someText"></label>
+        <input type="text" name="someText" id="someText">
+        <input type="submit" id="postSubmit">
+      </fieldset>
+    </form>
+    <div>
+      <h2>The return is:</h2>
+      <ul>
+        <li><span><b>Response: </b></span><span id="textResponse"></span></li>
+      </ul>
+    </div>
+	
   </body>
 </html>
