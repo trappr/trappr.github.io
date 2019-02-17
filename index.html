@@ -49,6 +49,7 @@
 			req.addEventListener('load',function(){
 		  if(req.status >= 200 && req.status < 400){
 			var weather = (JSON.parse(req.responseText));
+			console.log(JSON.parse(req.responseText));
 			document.getElementById("mainTemp").innerHTML = weather.main.temp + " degrees F";
 			document.getElementById("mainWeather").innerHTML = weather.weather[0].main;
 			document.getElementById("wind").innerHTML = weather.wind.speed + " miles/hour";
