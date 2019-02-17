@@ -67,7 +67,7 @@
 			var req = new XMLHttpRequest();
 			var payload = {longUrl:null};
 			payload.longUrl = document.getElementById('someText').value;
-			req.open('POST', 'http://httpbin.org/post', true);
+			req.open('POST', 'https://httpbin.org/post', true);
 			req.setRequestHeader('Content-Type', 'application/json');
 			req.addEventListener('load',function(){
 				if(req.status >= 200 && req.status < 400){
