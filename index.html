@@ -1,91 +1,23 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <b>Weather Info</b>
-	
-  </head>
-  <body>
-    <form>
-      <fieldset>
-        <legend>Enter Zip Code</legend>
-        <label for="zipCode"></label>
-        <input type="text" name="zipCode" id="zipCode">
-        <input type="submit" id="weatherSubmit">
-      </fieldset>
-    </form>
-    <div>
-      <h2>Result</h2>
-      <ul>
-		<li><span><b>City: </b></span><span id="city"></span></li>
-        <li><span><b>Weather: </b></span><span id="mainWeather"></span></li>
-		<li><span><b>Temp: </b></span><span id="mainTemp"></span></li>
-		<li><span><b>Wind Speed: </b></span><span id="wind"></span></li>
-      </ul>
-    </div>
-	<form>
-      <fieldset>
-        <legend>Enter Some Text and Click Submit</legend>
-        <label for="someText"></label>
-        <input type="text" name="someText" id="someText">
-        <input type="submit" id="postSubmit">
-      </fieldset>
-    </form>
-    <div>
-      <h2>The return is:</h2>
-      <ul>
-        <li><span><b>Response: </b></span><span id="textResponse"></span></li>
-      </ul>
-    </div>
-	<script type="text/javascript">
-      var apiKey = "4a348f6fbab35c14417e4609c071970f";
-	  
-	document.addEventListener('DOMContentLoaded', weatherSubmit);
-	document.addEventListener('DOMContentLoaded', postSubmit);
-
-	function weatherSubmit(){
-		document.getElementById('weatherSubmit').addEventListener('click', function(event){
-			var req = new XMLHttpRequest();
-			var zip = document.getElementById('zipCode').value;
-			req.open("GET", "https://api.openweathermap.org/data/2.5/weather?zip=" + zip + ",us&units=imperial&appid=" + apiKey, true);
-			req.addEventListener('load',function(){
-		  if(req.status >= 200 && req.status < 400){
-			var weather = (JSON.parse(req.responseText));
-			console.log(JSON.parse(req.responseText));
-			document.getElementById("city").innerHTML = weather.name;
-			document.getElementById("mainTemp").innerHTML = weather.main.temp + " degrees F";
-			document.getElementById("mainWeather").innerHTML = weather.weather[0].main;
-			document.getElementById("wind").innerHTML = weather.wind.speed + " miles/hour";
-		  } else {
-			console.log("Error in network request: " + req.statusText);
-		  }});
-			req.send(null);
-			
-			event.preventDefault();
-		})
-	}
-		  
-	function postSubmit(){
-		document.getElementById('postSubmit').addEventListener('click', function(event){
-			var req = new XMLHttpRequest();
-			var payload = {longUrl:null};
-			payload.longUrl = document.getElementById('someText').value;
-			req.open('POST', 'https://httpbin.org/post', true);
-			req.setRequestHeader('Content-Type', 'application/json');
-			req.addEventListener('load',function(){
-				if(req.status >= 200 && req.status < 400){
-					var response = JSON.parse(req.responseText);
-					document.getElementById('textResponse').innerHTML = response.json['longUrl'];
-					console.log(JSON.parse(req.responseText));
-				} else {
-					console.log("Error in network request: " + req.statusText);
-				}});
-			req.send(JSON.stringify(payload));
-			  
-			event.preventDefault();
-		})
-	}
-	  
-	  
-    </script>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sawyer Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Sawyer-saurus</h1>
+        <img src="https://www.amazon.com/drive/v1/nodes/EtdgFx8qRuy9RMF591xrQQ/contentRedirection?querySuffix=%3FviewBox%3D889%2C888&ownerId=A24LOOV900SAHO&cb=1562882775535">
+        <img src="https://www.amazon.com/drive/v1/nodes/PcAnIHE2Qm2n6xwbUtgsTA/contentRedirection?querySuffix=%3FviewBox%3D889%2C888&ownerId=A24LOOV900SAHO&cb=1562886882172">
+        <img src="https://www.amazon.com/drive/v1/nodes/CSKR0JlRTnSel_1j3cXfaw/contentRedirection?querySuffix=%3FviewBox%3D889%2C888&ownerId=A24LOOV900SAHO&cb=1562882775983">
+        <img src="https://www.amazon.com/drive/v1/nodes/s4TGNMBsR-u9iF7lB2Dgog/contentRedirection?querySuffix=%3FviewBox%3D889%2C888&ownerId=A24LOOV900SAHO&cb=1562886883669">
+        <img src="https://www.amazon.com/drive/v1/nodes/m1oYMHg3SJSUL94OQj4t0w/contentRedirection?querySuffix=%3FviewBox%3D887%2C888&ownerId=A24LOOV900SAHO&cb=1562882801707">
+        <img src="https://www.amazon.com/drive/v1/nodes/t7Lj7wymRbyvMnnOfsA-5w/contentRedirection?querySuffix=%3FviewBox%3D887%2C888&ownerId=A24LOOV900SAHO&cb=1562886905972">
+        <img src="https://www.amazon.com/drive/v1/nodes/dkwqVjrnQ4-XSxrJsiJI9g/contentRedirection?querySuffix=%3FviewBox%3D889%2C888&ownerId=A24LOOV900SAHO&cb=1562882777803">
+        <img src="https://www.amazon.com/drive/v1/nodes/KH0KcuhwQFmwarjoYPLkjg/contentRedirection?querySuffix=%3FviewBox%3D889%2C888&ownerId=A24LOOV900SAHO&cb=1562886925825">
+        <img src="https://www.amazon.com/drive/v1/nodes/ut5OglRNRaeDxnZn0uNckA/contentRedirection?querySuffix=%3FviewBox%3D887%2C888&ownerId=A24LOOV900SAHO&cb=1562882848646">
+</body>
 </html>

@@ -1,0 +1,13 @@
+img {
+    width: 30%;
+    float: left;
+    margin: 1.66%
+}
+
+h1 {
+    margin-left: 1.66%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 40px;
+    border-bottom: 4px solid gray;
+    width: 30%;
+}
