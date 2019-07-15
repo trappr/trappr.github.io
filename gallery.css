@@ -1,4 +1,4 @@
-img {
+/* img {
     width: 30%;
     float: left;
     margin: 1.66%
@@ -10,4 +10,21 @@ h1 {
     font-size: 30px;
     border-bottom: 4px solid gray;
     width: 30%;
+} */
+
+body {
+    padding-top: 70px;
+}
+
+.navbar-default {
+    background: black;
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+    color: white;
 }
