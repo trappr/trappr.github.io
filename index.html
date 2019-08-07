@@ -29,17 +29,18 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">About <span class="sr-only">(current)</span></a></li>
                     <li><a href="#">Activities</a></li>
-                    
                 </ul>
                 
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Where I've Been</a></li>
-                    
                 </ul>
-                
+
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Temp: <span id="temp"></span> degrees</a></li>
-                    
+                    <li><a>Bozeman Temp: <span id="temp"></span> degrees</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a>S&P: <span id="temp2"></span></a></li>
                 </ul>
                 
             </div><!-- /.navbar-collapse -->
@@ -71,46 +72,65 @@
         </div>
     
         <div class="row">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="thumbnail">
-                        <img src="images/20180512_090719.jpg"/>
-                    </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="thumbnail">
+                    <img src="images/20180512_090719.jpg"/>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="thumbnail">
-                        <img src="images/20180716_081722.jpg"/>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="thumbnail">
-                        <img src="images/20180624_192053.jpg"/>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <!-- BS slide carousel -->
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">          
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item thumbnail active">
+                            <img src="images/20180716_081722.jpg" alt="Los Angeles">
+                        </div>
+                        <div class="item">
+                            <img src="images/20180225_093145.jpg" alt="Chicago">
+                        </div>
+                        <div class="item">
+                            <img src="images/20180324_122027.jpg" alt="New York">
+                        </div>
+                        <div class="item">
+                            <img src="images/20180602_170734_001.jpg" alt="New York">
+                        </div>
+                        <div class="item">
+                            <img src="images/20190530_160616.jpg" alt="New York">
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="thumbnail">
+                    <img src="images/20180624_192053.jpg"/>
+                </div>
+            </div>
+        </div>
 
-            <div class="row">
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="thumbnail">
-                            <img src="images/20180602_170734_001.jpg"/>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="thumbnail">
-                            <img src="images/20180911_091959.jpg"/>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="thumbnail">
-                            <img src="images/20190530_160616.jpg"/>
-                        </div>
+        <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="thumbnail">
+                        <img src="images/20180602_170734_001.jpg"/>
                     </div>
                 </div>
-    
-    
+                <div class="col-lg-4 col-sm-6">
+                    <div class="thumbnail">
+                        <img src="images/20180911_091959.jpg"/>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="thumbnail">
+                        <img src="images/20190530_160616.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-        
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="test.js"></script>
-    
+
 </body>
 </html>
